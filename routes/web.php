@@ -16,4 +16,8 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 
-Route::get("/info", 'InfoController@index');
+Route::get('/info', function()
+{
+	return view('survey');
+});
+

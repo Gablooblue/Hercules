@@ -1,14 +1,15 @@
-@extends("layout.toolbar")
+@extends("layouts.toolbar")
 
 @section('content')
-<div class = "container">
+<div class = "container" style="padding-top:60px;">
 	<div class = "row">
 		<div class = "col-md-8 col-md-offset-2">
 			<div class = "panel panel-default">
-				<div class = "panel-heading">User info </div>
+				<div class = "panel-heading">User info</div>
 			<div class= "panel-body">
+				
+				<form class="form-horizontal" role="form" method="POST"> 
 				{{ csrf_field() }}
-				<form class="form-horizontal" role="form" method="POST" action="{{ route('info') }}">
 				<div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
                             <label for="age" class="col-md-4 control-label">Age</label>
 
@@ -50,11 +51,19 @@
                         </div>
 			<div class ="form-group {{ $errors->has('gender') ? ' has-error' : '' }}">
 				<label for="gender" class="col-md-4 control-label">Gender</label>
-				<div class = "col md-4">
-					<input id="gender" type = 'radio' class = "form-control" name="gender" value = "Male">Male</input>
+				<div class = "col md-4" >
+					<select>
+						<option selected disabled> </option>	
+						<option value= "M">Male</option>
+						<option value"F">Female</option>
+					</select>
 				</div>
-				<div class = "col md-4">
-					<input id="gender" type="radio" class = "form-control" name="gender" value = "Female">Female</input>
+				<div class="col-md-8 col-md-offset-6">
+					<button type="submit" class"btn btn-primary">Submit</button>
 				</div>
 			</form>
+		</div>
+	</div>
+</div>
+
 @endsection	
