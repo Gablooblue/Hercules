@@ -16,8 +16,16 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/info', function()
-{
-	return view('survey');
-});
+Route::get('/info', 
+	['as' => 'info_show', 'uses' => 'InfoController@show']);
 
+Route::post('/info',
+	['as' => 'info_update', 'uses' => 'InfoController@update']);
+
+Route::get('/posts', 'PostController@showPosts');
+
+Route::get('/create', 
+	['as' => 'create_show', 'uses' =>'PostController@showCreate']);
+
+Route::post('/create',
+	['as' => 'create_post', 'uses' =>'PostController@create']);

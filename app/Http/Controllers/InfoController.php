@@ -4,33 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-
+use App\Http\Requests\InfoRequest;
+use App\Info;
 class InfoController extends Controller
 {
-	public function index()
+	public function show()
 	{
 		return view('survey');
 	}	
-	public function validator(array $data)
-	{
-		return Validator::make($data, [
-			'height' => 'required',
-			'weight' => 'required',
-			'age' => 'required',
-			'intensity' => 'required',
-			'gender' => 'required|max:3'
-		]);
-	}	
 
-	public function create(array $data)
+	public function update(Request $request)
 	{
-		return User::create([
+
+		$data = $request->all();
+			
+		return Info::create([
 			'weight' => $data['weight'],
 			'height' => $data['height'],
 			'age' => $data['age'],
 			'intensity' => $data['intensity'],
 			'gender' => $data['gender']
-
 		]);
 	}	
 }

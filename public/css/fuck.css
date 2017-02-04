@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'switch' !IMPORTANT;
+    src: url('SwitchFont.ttf');
+}
+
+@font-face {
+    font-family: 'haxr';
+    src: url('haxrcorpttf.ttf');
+}
+
+html {
+    background: url('bg.jpg');
+    background-size: 100%;
+    font-family: 'switch';
+}
+
+#main {
+    position: absolute;
+    width: 350px; height: 500px;
+    top: 0px; right: 0px; left: 0px; bottom: 0px;
+    margin: auto;
+    //background-color: aliceblue;
+    //border: 3px solid #000;
+}
+
+.leftbox {
+    position: absolute;
+    height: 496px; width: 240px;
+    border: 2px solid #000;
+}
+
+.rightbox {
+    position: absolute;
+    background-color: #2c3033;
+    height: 496px; width: 100px;
+    left: 248px;
+    border: 2px solid #000;
+}
+
+.welcome {
+    position: absolute;
+    margin: auto;
+    top: 15px;
+    text-align: center;
+    font-size: 20px;
+    color: #00b19c;
+}
+
+ul {
+    position: absolute;
+    height: 400px;
+    margin-right: 30px;
+    margin-left: -5px;
+    list-style-type: none;
+    float: left;
+}
+
+li {
+    text-align: center;
+    
+}
+
+.links {
+    width: 100px;
+    top: 60px;
+    position: absolute;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'haxr';
+    font-size: 20px;
+    height: 400px;
+    line-height: 50px;
+    color: #969696;
+}
+
+a:hover {
+    transition: color 0.3s ease;
+    color: #57e6c5;
+    transition: font 0.1s ease;
+    font-size: 25px;
+}

@@ -17,7 +17,7 @@
 	</script>
 </head>
 <body>
-	<nav id = "myToolbar" class = 'navbar navbar-default navbar-fixed-top' style="background-color:#403939;">
+	<nav id = "myToolbar" class = 'navbar navbar-default navbar-fixed-top' style="background-color:transparent; border-style:none !IMPORTANT;">
 		<div class="container">
 			<div class = "navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -45,14 +45,12 @@
 	</nav>
 	@yield('content')
 	<br><br>
-	<div class="footercenter">
-	<nav id = "myFooter" class="footer">	
-		<ul> 
-			<li> <a href="{{ url('/about') }}">About us</a></li>
-			<li> <a href="{{ url('/contact') }}">Contact us</a></li>
-			<li> <a href="{{ url('/FAQ') }}">FAQ</a></li>
-		</ul>
-	</nav>
+	<div class="footer">	
+		<div class = "container text-center">
+					 <a href="{{ url('/about') }}">About us&nbsp</a>
+					 <a href="{{ url('/contact') }}">Contact us&nbsp</a>
+					 <a href="{{ url('/FAQ') }}">FAQ&nbsp</a>
+		</div>
 	</div>
 
 </body>
