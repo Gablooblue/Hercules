@@ -19,6 +19,10 @@ class Posts extends Migration
 		    $table->string('title');
 		    $table->string('post');
 		    $table->string('author');
+		    $table->string('goal');
+		    $table->string('intensity');
+		    $table->string('Frequency');
+		    $table->string('time');
 		    $table->integer('likes')->default(0);
 		    $table->integer('dislikes')->default(0);
 		    $table->timestamps();

@@ -1,7 +1,10 @@
 @extends('layouts.toolbar')
 
 @section('content')
-<div class="container" style="padding-top:200px;">
+<div class="container">
+	<div class = "text-center">
+		<img src='favicon.png' width="200px" height="200px"/>
+	</div>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
                 <div class="panel-body">

@@ -22,10 +22,12 @@ Route::get('/info',
 Route::post('/info',
 	['as' => 'info_update', 'uses' => 'InfoController@update']);
 
-Route::get('/posts', 'PostController@showPosts');
+Route::get('/posts', 'ShowController@showPosts');
 
 Route::get('/create', 
 	['as' => 'create_show', 'uses' =>'PostController@showCreate']);
 
 Route::post('/create',
 	['as' => 'create_post', 'uses' =>'PostController@create']);
+
+Route::get('/account/{user}', 'UserController@show');

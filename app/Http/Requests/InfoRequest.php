@@ -28,7 +28,9 @@ class InfoRequest extends FormRequest
 		'weight' => 'required',
 		'age' => 'required',
 		'intensity' => 'required',
-		'gender' => 'required|max:1'
+		'gender' => 'required|max:1',
+		'user_id' => 'required',
+		'BMR' => 'nullable',
         ];
     }
 }

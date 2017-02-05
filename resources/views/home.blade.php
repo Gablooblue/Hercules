@@ -1,17 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.toolbar')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
+<div class= "container" >
+		<div class = "text-center">
+			<img src='favicon.png' width="300px" height="300px"/>
+		</div>
+		<h1 class = "text-center">For users by users</h1>
 </div>
 @endsection

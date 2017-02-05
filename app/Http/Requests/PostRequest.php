@@ -27,6 +27,9 @@ class PostRequest extends FormRequest
 		'title' => 'required',
 		'post' => 'required',
 		'author' => 'required',
+		'intensity' => 'required',
+		'Frequency' => 'required',
+		'time' => 'required',
         ];
     }
 }

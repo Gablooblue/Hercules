@@ -1,11 +1,11 @@
 @extends("layouts.toolbar")
 
 @section('content')
-<head>
-	<link rel="stylesheet" href="resources/views/fuck.css" />
-</head>
 <body>
-<div class = "container" style="padding-top:200px;">
+<div class = "container">
+	<div class = "text-center">
+		<img src='favicon.png' width="200px" height="200px"/>
+	</div>
 	<div class = "row">
 		<div class = "col-md-8 col-md-offset-2">
 			<div class= "panel-body">
@@ -50,13 +50,33 @@
                         </div>
 			<div class ="form-group {{ $errors->has('gender') ? ' has-error' : '' }}">
 				<div class = "col md-8 col-md-offset-2" style = "padding-left:20px;">
-					<select>
+					<select id="gender" name="gender">
 						<option selected disabled>Gender</option>	
 						<option value= "M">Male</option>
 						<option value= "F">Female</option>
 					</select>
+			       @if ($errors->has('weight'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('weight') }}</strong>
+                                    </span>
+                                @endif
 				</div>
-				<br>
+				</div>
+			<div class ="form-group {{ $errors->has('intensity') ? ' has-error' : '' }}">
+				<div class = "col md-8 col-md-offset-2" style = "padding-left:20px;">
+					<select id="intensity" name="intensity">
+						<option selected disabled>Intensity</option>	
+						<option value= "Low">Low</option>
+						<option value= "Medium">Medium</option>
+						<option value="High">High</option>
+					</select>
+                               @if ($errors->has('weight'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('weight') }}</strong>
+                                    </span>
+                                @endif
+				</div>
+				</div>
 				<div class="col-md-8 col-md-offset-2" style="padding-left:20px;">
 					<button type="submit" class="btn btn-primary">
 Submit</button>
