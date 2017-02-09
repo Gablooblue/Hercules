@@ -51,9 +51,9 @@
 	<br><br>
 	<div class="footer">	
 		<div class = "container text-center">
-					 <a href="{{ url('/about') }}">About us&nbsp</a>
-					 <a href="{{ url('/contact') }}">Contact us&nbsp</a>
-					 <a href="{{ url('/FAQ') }}">FAQ&nbsp</a>
+					 <a href="">About us&nbsp</a>
+					 <a href="">Contact us&nbsp</a>
+					 <a href="">FAQ&nbsp</a>
 		</div>
 	</div>
 

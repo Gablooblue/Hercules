@@ -11,11 +11,11 @@ class ShowController extends Controller
 	{
 		if(request()->has('intensity'))
 		{
-			$posts = DB::table('posts')->where('intensity', request('intensity'))->paginate(5);
+			$posts = DB::table('posts')->where('intensity', request('intensity'))->latest()->paginate(5);
 		}
 		else
 		{	
-			$posts = DB::table('posts')->paginate(5);
+			$posts = DB::table('posts')->latest()->paginate(5);
 		}
 		return view("posts", ['posts' => $posts]);
 	}	
